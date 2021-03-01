@@ -10,7 +10,7 @@
             this.CascadeMode = CascadeMode.StopOnFirstFailure;
 
             this.RuleFor(f => f.Offset)
-                .GreaterThan(0);
+                .GreaterThanOrEqualTo(0);
 
             this.RuleFor(f => f.Limit)
                .GreaterThan(0);
