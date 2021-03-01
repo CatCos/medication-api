@@ -28,7 +28,7 @@
             }
             catch (Exception)
             {
-                this.logger.LogError("Failed to create medications.");
+                this.logger.LogError("Failed to create medication.");
 
                 throw;
             }

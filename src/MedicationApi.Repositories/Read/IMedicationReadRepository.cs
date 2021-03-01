@@ -11,6 +11,6 @@
             int offset,
             int limit);
 
-        Task<Medication> GetMedicationByIdAsync(Guid medicationId);
+        Task<Medication?> GetMedicationByIdAsync(Guid medicationId);
     }
 }

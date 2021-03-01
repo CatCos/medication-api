@@ -5,13 +5,10 @@
     using MedicationApi.Data.Models.Entities;
     using MongoDB.Driver;
 
-    public class MedicationWriteRepository : IMedicationWriteRepository
+    public class MedicationWriteRepository : BaseRepository, IMedicationWriteRepository
     {
-        private readonly IMongoCollection<Medication> collection;
-
-        public MedicationWriteRepository(IMongoDatabase database)
+        public MedicationWriteRepository(IMongoDatabase database) : base(database)
         {
-            this.collection = database.GetCollection<Medication>("Medications");
         }
 
         public async Task InsertAsync(Medication medication)

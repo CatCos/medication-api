@@ -87,9 +87,9 @@
             var exception = this.fixture.Create<NotFoundException>();
 
             this.medicationReadRepositoryMock.Setup(
-                x => x.GetMedicationByIdAsync(
-                    It.Is<Guid>(y => y == medicationId)))
-                .ReturnsAsync((Medication)null);
+                 x => x.GetMedicationByIdAsync(
+                     It.Is<Guid>(y => y == medicationId)))
+                 .ReturnsAsync((Medication)null);
 
             // Act
             var ex = await Assert.ThrowsExceptionAsync<NotFoundException>(
